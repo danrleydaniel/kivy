@@ -15,6 +15,18 @@ class Test(App):
 		box.add_widget(button) #acrescentando ao BoxLayout
 		box.add_widget(label)
 
+		box2 = BoxLayout() #BoxLayout aglomerará todos os widgets que eu quiser colocar na tela.
+		#O argumento 'orientation' diz em qual posição os widgets vão ficar (vertical, horizontal)
+
+		#ACRESCENTANDO UM BOX DENTRO DE UM BOX:
+		button2 = Button(text="Botão 2")
+		label2 = Label(text="Texto 2")
+
+		box2.add_widget(button2)
+		box2.add_widget(label2)
+
+		box.add_widget(box2)
+
 		return box #retorna a box em vez de um widget específico
 
 Test().run() #rodando a classe do aplicativo
